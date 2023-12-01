@@ -1,0 +1,39 @@
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+
+$dark-blue: #273384;
+$light-blue: #809BAA;
+body{
+
+    margin-left: 3rem;
+
+}
+
+
+.form-container{
+    padding: 1rem;
+ 
+
+    h1 {
+        margin-bottom: 3rem;
+       
+        color: $dark-blue; 
+      }
+}
+
+  .custom-card {
+    border: none !important;
+  
+
+  .custom-label {
+    font-size: 20px;
+    color: $light-blue; 
+  }
+  .custom-radio {
+  
+ 
+      font-size: 20px;
+      color: #336699; /* Your desired color */
+    
+  }
+}
