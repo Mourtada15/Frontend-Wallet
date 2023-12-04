@@ -1,40 +1,123 @@
-@import 'node_modules/bootstrap/scss/bootstrap';
-
+@import "node_modules/bootstrap/scss/bootstrap";
 
 $dark-blue: #273384;
-$light-blue: #809BAA;
-$background:#ebeded;
+$light-blue: #809baa;
+$background: #ebeded;
+$button: #ffd700;
+$icon-size: 1em;
 //form scss
-.form-container{
-    padding: 1rem;
-   
-   
- 
+.form-container {
+  padding: 1rem;
 
-    h1 {
-        margin-bottom: 3rem;
-       
-        color: $dark-blue; 
-      }
+  h1 {
+    margin-bottom: 3rem;
+
+    color: $dark-blue;
+  }
 }
 
-  .custom-card {
-    border: none !important;
-    background-color: none;
+.custom-card {
+  border: none !important;
+
+  background-color: transparent !important;
 
   .custom-label {
     font-size: 20px;
-    color: $light-blue; 
+    color: $light-blue;
   }
   .custom-radio {
-  
- 
-      font-size: 20px;
-      color: $light-blue; 
-    
+    font-size: 20px;
+    color: $light-blue;
   }
 }
+
 //register page
-.Register{
-  background-color:$background; 
+.Register {
+  background-color: $background;
+}
+//search component
+
+.search-page {
+  .form-inline {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    display: flex;
+    align-items: center;
+    margin-left: 90px;
+  
+  }
+
+  .form-control {
+    width: 75%;
+    margin-left: 1rem;
+    background-color: $background;
+  }
+  input::placeholder {
+    color: $light-blue;
+  }
+  .bi-search {
+    color: $dark-blue;
+    margin-left: 1rem;
+  }
+}
+//admin page
+.admin {
+  display: flex;
+  
+
+.Admin-container {
+  display: flex;
+  flex-direction: column;
+  .notification{
+    display: flex;
+    justify-content: flex-end;
+    color: $button;
+    font-size: 2em;
+  }
+}
+}
+//cards
+
+
+.card-container {
+  display: flex;
+  margin-left: 100px;
+  margin-top: 30px;
+  justify-content: space-evenly;
+
+}
+.card {
+  width: 18rem;
+  height: 9rem;
+  margin-right: 10px;
+  border: 1px solid $button;
+
+  .card-body {
+
+    .card-title {
+      font-size: 2em;
+      margin-bottom: 5px;
+      color: $dark-blue;
+      i {
+        font-size: $icon-size;
+        margin-right: 5px;
+        color: $button;
+      }
+    }
+
+    .card-text {
+      font-size: 1.8em;
+      color: $light-blue;
+      text-align: center;
+    }
+  }
+}
+
+//User table
+.table{
+  margin-left: 100px;
+  margin-top: 60px;
+}
+.dark{
+color:$button !important;
 }
