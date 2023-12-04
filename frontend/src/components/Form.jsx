@@ -19,7 +19,7 @@ export default function Form() {
 
     <MDBContainer fluid className="form-container">
 
-      <MDBRow className='justify-content-center align-items-center m-5'>
+      <MDBRow className='justify-content-left align-items-center m-5'>
 
         <MDBCard className='custom-card'>
           <MDBCardBody className='px-4'>
