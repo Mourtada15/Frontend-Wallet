@@ -15,7 +15,7 @@ export default function Search () {
           aria-label="Search"
         /> 
       
-        <i class="fa fa-bell notification" aria-hidden="true"></i>
+     
       </form>
   
     </MDBCol>

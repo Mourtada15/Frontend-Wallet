@@ -44,7 +44,7 @@ $icon-size: 1em;
     margin-bottom: 4rem;
     display: flex;
     align-items: center;
-    margin-left: 90px;
+    margin-left: 30px;
   justify-content: space-between;
   }
 
@@ -60,13 +60,7 @@ $icon-size: 1em;
     color: $dark-blue;
     margin-left: 1rem;
   }
-  .notification{
-    display: flex;
-justify-content: right;
-// margin-left: 1200px;
-    color: $button;
-    font-size: 2em;
-  }
+
 
  
 }
@@ -96,7 +90,7 @@ justify-content: right;
 
 .the-card-container {
   display: flex;
-  margin-left: 100px;
+  margin-left: 50px;
   margin-top: 30px;
   justify-content: space-evenly;
 
@@ -132,7 +126,7 @@ justify-content: right;
 .the-table {
   width: 100%;
   border-collapse: collapse;
-  margin-left: 100px;
+  margin-left: 50px;
     margin-top: 80px;
  
 }
@@ -155,4 +149,21 @@ th, td {
 //sidebar
 .sidebar-menu-item i {
   color:$button;
+}
+//buttons
+.btn.btn-primary.btn-lg {
+
+  background-color: #3498db; 
+  color: #fff; 
+  margin-left: 90px;
+  
+}
+.notification{
+  display: flex;
+justify-content: right;
+margin-left: 50px;
+margin-top: 20px;
+justify-content: flex-end;
+  color: $button;
+  font-size: 2em;
 }
