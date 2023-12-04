@@ -2,9 +2,9 @@ import React from "react";
 export default function UserTable() {
   return (
   
-      <table class="table">
-        <thead class="thead-dark">
-          <tr className="dark">
+      <table className="the-table">
+        <thead className="the-thead-dark">
+          <tr className="the-dark">
             <th scope="col">id</th>
             <th scope="col">UserName</th>
             <th scope="col">Email</th>

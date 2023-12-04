@@ -14,24 +14,23 @@ export default function Cards() {
           <MDBCardText className="the-cards-text">12,451</MDBCardText>
         </MDBCardBody>
       </MDBCard>
-
-      <MDBCard className="card">
+      <MDBCard className="the-card">
         <MDBCardBody className="the-cards-body">
           <MDBCardTitle className="the-card-titles">
-            <i className="fas fa-store"></i> Merchants
-          </MDBCardTitle>
-          <MDBCardText className="the-cards-text">25,21</MDBCardText>
+            <i className="fas fa-users"></i> Merchants
+          </MDBCardTitle >
+          <MDBCardText className="the-cards-text">2,451</MDBCardText>
+        </MDBCardBody>
+      </MDBCard>
+      <MDBCard className="the-card">
+        <MDBCardBody className="the-cards-body">
+          <MDBCardTitle className="the-card-titles">
+            <i className="fas fa-users"></i> Admins
+          </MDBCardTitle >
+          <MDBCardText className="the-cards-text">51</MDBCardText>
         </MDBCardBody>
       </MDBCard>
 
-      <MDBCard className="card">
-        <MDBCardBody className="the-cards-body">
-          <MDBCardTitle className="the-card-titles">
-            <i className="fas fa-user-shield"></i> Admins
-          </MDBCardTitle>
-          <MDBCardText className="the-cards-text">41</MDBCardText>
-        </MDBCardBody>
-      </MDBCard>
     </div>
   
   );

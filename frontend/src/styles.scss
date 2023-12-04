@@ -4,6 +4,7 @@ $dark-blue: #273384;
 $light-blue: #809baa;
 $background: #ebeded;
 $button: #ffd700;
+$baby-blue:#ebedee;
 $icon-size: 1em;
 //form scss
 .form-container {
@@ -44,7 +45,7 @@ $icon-size: 1em;
     display: flex;
     align-items: center;
     margin-left: 90px;
-  
+  justify-content: space-between;
   }
 
   .form-control {
@@ -59,23 +60,37 @@ $icon-size: 1em;
     color: $dark-blue;
     margin-left: 1rem;
   }
-}
-//admin page
-.admin {
-  display: flex;background-color: #ffd700;
-  
-
-.Admin-container {
-  display: flex;
-  flex-direction: column;
   .notification{
     display: flex;
-    justify-content: flex-end;
+justify-content: right;
+// margin-left: 1200px;
     color: $button;
     font-size: 2em;
   }
+
+ 
 }
+.button{
+  background-color: $button;
+  color: $dark-blue;
+  border: none;
 }
+//admin page
+// .admin {
+
+.admin {
+  display: flex;
+  height: 90vh; 
+}
+
+.Admin-container {
+  flex: 0.9;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
 // cards
 
 
@@ -114,10 +129,30 @@ $icon-size: 1em;
 }
 
 // //User table
-.table{
+.the-table {
+  width: 100%;
+  border-collapse: collapse;
   margin-left: 100px;
-  margin-top: 60px;
+    margin-top: 80px;
+ 
 }
-.dark{
-color:$button !important;
+
+.the-thead-dark {
+  background-color: $baby-blue;
+  color: white;
+}
+
+th, td {
+  border: 1px solid white;
+  padding: 8px;
+  text-align: left;
+}
+
+.the-dark {
+  color:$light-blue !important;
+}
+
+//sidebar
+.sidebar-menu-item i {
+  color:$button;
 }

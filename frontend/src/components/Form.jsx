@@ -74,7 +74,7 @@ export default function Form() {
 
           
 
-            <MDBBtn size='lg'>Sign up</MDBBtn>
+            <MDBBtn size='lg' className="button">Sign up</MDBBtn>
 
           </MDBCardBody>
         </MDBCard>

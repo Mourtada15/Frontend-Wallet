@@ -5,11 +5,11 @@ import UserCard from "../components/UsersCard";
 import UserTable from "../components/UserTable";
 export default function AdminDashboard() {
   return (
-    <div className="admin" >
+    <div className="admin" md='12'>
       <Sidebar /> 
 
       <div className="Admin-container">
-      <i class=" notification fa fa-bell" aria-hidden="true" ></i>
+    
         <Search />
 
         <UserCard />
