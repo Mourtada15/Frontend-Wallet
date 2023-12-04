@@ -5,31 +5,31 @@ import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText } from "mdb-react-ui-ki
 export default function Cards() {
   return (
 
-    <div className="card-container">
-      <MDBCard className="card">
-        <MDBCardBody>
-          <MDBCardTitle>
+    <div className="the-card-container">
+      <MDBCard className="the-card">
+        <MDBCardBody className="the-cards-body">
+          <MDBCardTitle className="the-card-titles">
             <i className="fas fa-users"></i> Users
-          </MDBCardTitle>
-          <MDBCardText >12,451</MDBCardText>
+          </MDBCardTitle >
+          <MDBCardText className="the-cards-text">12,451</MDBCardText>
         </MDBCardBody>
       </MDBCard>
 
       <MDBCard className="card">
-        <MDBCardBody>
-          <MDBCardTitle>
+        <MDBCardBody className="the-cards-body">
+          <MDBCardTitle className="the-card-titles">
             <i className="fas fa-store"></i> Merchants
           </MDBCardTitle>
-          <MDBCardText>25,21</MDBCardText>
+          <MDBCardText className="the-cards-text">25,21</MDBCardText>
         </MDBCardBody>
       </MDBCard>
 
       <MDBCard className="card">
-        <MDBCardBody>
-          <MDBCardTitle>
+        <MDBCardBody className="the-cards-body">
+          <MDBCardTitle className="the-card-titles">
             <i className="fas fa-user-shield"></i> Admins
           </MDBCardTitle>
-          <MDBCardText>41</MDBCardText>
+          <MDBCardText className="the-cards-text">41</MDBCardText>
         </MDBCardBody>
       </MDBCard>
     </div>
