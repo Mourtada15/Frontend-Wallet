@@ -155,25 +155,37 @@ th, td {
 
   background-color: #3498db; 
   color: #fff; 
-  margin-left: 90px;
+  margin-left: 50px;
   
 }
-.notification{
-  display: flex;
-justify-content: right;
-margin-left: 50px;
-margin-top: 20px;
-justify-content: flex-end;
-  color: $button;
-  font-size: 2em;
-}
+
 //transfer page
 .transfer{
   display: flex;
   height: 90vh; 
 }
 
-.container-search{
+.transfer-container{
+  flex: 0.9;
+  display: flex;
+  flex-direction: column;
+}
+.notification{
+  display: flex;
+
+margin-left: 50px;
+margin-top: 25px;
+justify-content: flex-end;
+  color: $button;
+  font-size: 2em;
+}
+//promotion
+.promotion{
+  display: flex;
+  height: 90vh; 
+}
+
+.promotion-container{
   flex: 0.9;
   display: flex;
   flex-direction: column;

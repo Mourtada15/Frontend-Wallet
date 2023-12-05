@@ -1,21 +1,16 @@
 import React from "react";
 import Sidebar from "../components/Sidebar";
 import Search from "../components/Search";
-import Table from "../components/TransferTable";
+import Table from "../components/PromotionTable";
 export default function Transfer(){
     return(
-      <div className="transfer">
+      <div className="promotion">
         <Sidebar /> 
+  <div className="promotion-container">
+    <Search/>
+    <Table/>
+  </div>
   
-     <div className="transfer-container">
-        <Search/>
-        <Table/>
-        
-     </div>
         </div>
     );
 }
-
-
-
-

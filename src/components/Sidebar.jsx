@@ -33,14 +33,14 @@ export default function Sidebar() {
 
         <CDBSidebarContent className="sidebar-content">
           <CDBSidebarMenu>
-            <NavLink exact to="/" activeClassName="activeClicked">
+            <NavLink exact to="/admin" activeClassName="activeClicked">
               <CDBSidebarMenuItem icon="columns" className="sidebar-menu-item">
                 Dashboard
               </CDBSidebarMenuItem>
             </NavLink>
             <NavLink exact to="/transfer" activeClassName="activeClicked">
               <CDBSidebarMenuItem icon="table" className="sidebar-menu-item">
-                Transfer
+                Transaction
               </CDBSidebarMenuItem>
             </NavLink>
             <li>
@@ -77,22 +77,17 @@ export default function Sidebar() {
                 )}
               </div>
             </li>
-            <NavLink exact to="/analytics" activeClassName="activeClicked">
+            {/* <NavLink exact to="/analytics" activeClassName="activeClicked">
               <CDBSidebarMenuItem
                 icon="chart-line"
                 className="sidebar-menu-item"
               >
                 Transaction
               </CDBSidebarMenuItem>
-            </NavLink>
-            <NavLink
-              exact
-              to="/hero404"
-              target="_blank"
-              activeClassName="activeClicked"
-            >
+            </NavLink> */}
+            <NavLink exact to="/promotion" activeClassName="activeClicked" >
               <CDBSidebarMenuItem
-                icon="exclamation-circle"
+             icon="exclamation-circle"
                 className="sidebar-menu-item"
               >
                 Promotions
@@ -111,7 +106,10 @@ export default function Sidebar() {
           </div>
         </CDBSidebarFooter>
       </CDBSidebar>
-      <i class="fa fa-bell notification" aria-hidden="true"></i>
+      <div className="notification">
+      <i class="fa fa-bell " aria-hidden="true"></i>
+        </div>
+  
     </div>
   );
 }
