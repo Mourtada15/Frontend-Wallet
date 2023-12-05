@@ -1,31 +1,115 @@
-import React from 'react'
-import logo from "../assets/logo.png"
+import React, { useState } from "react";
+import {
+  CDBSidebar,
+  CDBSidebarContent,
+  CDBSidebarFooter,
+  CDBSidebarHeader,
+  CDBSidebarMenu,
+  CDBSidebarMenuItem,
+} from "cdbreact";
+import { NavLink } from "react-router-dom";
 
-const sidebar = () => {
+export default function Sidebar() {
+  const [showUserDropdown, setShowUserDropdown] = useState(false);
+
+  const toggleUserDropdown = () => {
+    setShowUserDropdown(!showUserDropdown);
+  };
+
   return (
-    <div>
-      
+    <div
+      style={{ display: "flex", height: "100vh", overflow: "scroll initial" }}
+    >
+      <CDBSidebar textColor="#224FA8" backgroundColor="#ebedee">
+        <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
+          <a
+            href="/"
+            className="text-decoration-none"
+            style={{ color: "inherit" }}
+          >
+            PAYPLEX
+          </a>
+        </CDBSidebarHeader>
 
-      <div class="container-fluid height-100">
-    <div class="row">
+        <CDBSidebarContent className="sidebar-content">
+          <CDBSidebarMenu>
+            <NavLink exact to="/admin" activeClassName="activeClicked">
+              <CDBSidebarMenuItem icon="columns" className="sidebar-menu-item">
+                Dashboard
+              </CDBSidebarMenuItem>
+            </NavLink>
+            <NavLink exact to="/transfer" activeClassName="activeClicked">
+              <CDBSidebarMenuItem icon="table" className="sidebar-menu-item">
+                Transaction
+              </CDBSidebarMenuItem>
+            </NavLink>
+            <li>
+              <div>
+                <span
+                  onClick={toggleUserDropdown}
+                  style={{ cursor: "pointer" }}
+                >
+                  <CDBSidebarMenuItem
+                    icon="user"
+                    style={{ marginRight: "1.5rem" }}
+                    className="sidebar-menu-item"
+                  >
+                    Users{" "}
+                    {showUserDropdown ? (
+                      <i className="fas fa-chevron-up"></i>
+                    ) : (
+                      <i className="fas fa-chevron-down"></i>
+                    )}
+                  </CDBSidebarMenuItem>
+                </span>
+                {showUserDropdown && (
+                  <ul>
+                    <NavLink exact to="/sub1" activeClassName="activeClicked">
+                      <CDBSidebarMenuItem>user</CDBSidebarMenuItem>
+                    </NavLink>
+                    <NavLink exact to="/sub2" activeClassName="activeClicked">
+                      <CDBSidebarMenuItem>merchant</CDBSidebarMenuItem>
+                    </NavLink>
+                    <NavLink exact to="/sub3" activeClassName="activeClicked">
+                      <CDBSidebarMenuItem>admin</CDBSidebarMenuItem>
+                    </NavLink>
+                  </ul>
+                )}
+              </div>
+            </li>
+            {/* <NavLink exact to="/analytics" activeClassName="activeClicked">
+              <CDBSidebarMenuItem
+                icon="chart-line"
+                className="sidebar-menu-item"
+              >
+                Transaction
+              </CDBSidebarMenuItem>
+            </NavLink> */}
+            <NavLink exact to="/promotion" activeClassName="activeClicked" >
+              <CDBSidebarMenuItem
+             icon="exclamation-circle"
+                className="sidebar-menu-item"
+              >
+                Promotions
+              </CDBSidebarMenuItem>
+            </NavLink>
+          </CDBSidebarMenu>
+        </CDBSidebarContent>
 
-      <div class="col-md-9 order-md-2">
-        <h1>Main Content</h1>
-      </div>
-
-      <div class="col-md-3 order-md-1 bg-dark">
-        <img src={logo} alt="Logo" class="img-fluid mb-4"/>
-        <a href="#" class="text-white d-block">Home</a>
-        <a href="#" class="text-white d-block">Transfer</a>
-        <a href="#" class="text-white d-block">Users</a>
-        <a href="#" class="text-white d-block">Transactions</a>
-        <a href="#" class="text-white d-block">Promotions</a>
-      </div>
-
+        <CDBSidebarFooter style={{ textAlign: "center" }}>
+          <div
+            style={{
+              padding: "20px 5px",
+            }}
+          >
+            log out
+          </div>
+        </CDBSidebarFooter>
+      </CDBSidebar>
+      <div className="notification">
+      <i class="fa fa-bell " aria-hidden="true"></i>
+        </div>
+  
     </div>
-  </div>
-    </div>
-  )
+  );
 }
-
-export default sidebar

@@ -1,0 +1,192 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+
+$dark-blue: #273384;
+$light-blue: #809baa;
+$background: #ebeded;
+$button: #ffd700;
+$baby-blue:#ebedee;
+$icon-size: 1em;
+//form scss
+.form-container {
+  padding: 1rem;
+
+  h1 {
+    margin-bottom: 3rem;
+
+    color: $dark-blue;
+  }
+}
+
+.custom-card {
+  border: none !important;
+
+  background-color: transparent !important;
+
+  .custom-label {
+    font-size: 20px;
+    color: $light-blue;
+  }
+  .custom-radio {
+    font-size: 20px;
+    color: $light-blue;
+  }
+}
+
+//register page
+.Register {
+  background-color: $background;
+}
+//search component
+
+.search-page {
+  .form-inline {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+  justify-content: space-between;
+  }
+
+  .form-control {
+    width: 75%;
+    margin-left: 1rem;
+    background-color: $background;
+  }
+  input::placeholder {
+    color: $light-blue;
+  }
+  .bi-search {
+    color: $dark-blue;
+    margin-left: 1rem;
+  }
+
+
+ 
+}
+.button{
+  background-color: $button;
+  color: $dark-blue;
+  border: none;
+}
+//admin page
+// .admin {
+
+.admin {
+  display: flex;
+  height: 90vh; 
+}
+
+.Admin-container {
+  flex: 0.9;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+// cards
+
+
+.the-card-container {
+  display: flex;
+  margin-left: 50px;
+  margin-top: 30px;
+  justify-content: space-evenly;
+
+}
+.the-card {
+  width: 18rem;
+  height: 9rem;
+  margin-right: 10px;
+  border: 1px solid $button;
+
+  .the-cards-body {
+
+    .the-card-titles {
+      font-size: 2em;
+      margin-bottom: 5px;
+      color: $dark-blue;
+      i {
+        font-size: $icon-size;
+        margin-right: 5px;
+        color: $button;
+      }
+    }
+
+    .the-cards-text {
+      font-size: 1.8em;
+      color: $light-blue;
+      text-align: center;
+    }
+  }
+}
+
+// //User table
+.the-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-left: 50px;
+    margin-top: 80px;
+ 
+}
+
+.the-thead-dark {
+  background-color: $baby-blue;
+  color: white;
+}
+
+th, td {
+  border: 1px solid white;
+  padding: 8px;
+  text-align: left;
+}
+
+.the-dark {
+  color:$light-blue !important;
+}
+
+//sidebar
+.sidebar-menu-item i {
+  color:$button;
+}
+//buttons
+.btn.btn-primary.btn-lg {
+
+  background-color: #3498db; 
+  color: #fff; 
+  margin-left: 50px;
+  
+}
+
+//transfer page
+.transfer{
+  display: flex;
+  height: 90vh; 
+}
+
+.transfer-container{
+  flex: 0.9;
+  display: flex;
+  flex-direction: column;
+}
+.notification{
+  display: flex;
+
+margin-left: 50px;
+margin-top: 25px;
+justify-content: flex-end;
+  color: $button;
+  font-size: 2em;
+}
+//promotion
+.promotion{
+  display: flex;
+  height: 90vh; 
+}
+
+.promotion-container{
+  flex: 0.9;
+  display: flex;
+  flex-direction: column;
+}
