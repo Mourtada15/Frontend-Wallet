@@ -15,8 +15,8 @@ const App =()=>{
           <Route path='/registration' element={<Registration />} />
         <Route path="/admin" element={<AdminDashboard/>}/>
         <Route path="/user" element={<UserDashboard/>}/>
-<Route path="/transfer" element={<TransferPage/>}/>
-<Route path="/promotion" element={<PromotionPage/>}/>
+        <Route path="/transfer" element={<TransferPage/>}/>
+        <Route path="/promotion" element={<PromotionPage/>}/>
         </Routes>
       </BrowserRouter>
     </div>

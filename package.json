@@ -34,7 +34,7 @@
     "cdbreact": "^1.5.18",
     "mdb-react-ui-kit": "^7.0.0",
     "mdbreact": "^5.2.0",
-    "react-i18next": "^13.5.0",
+    "react-i18next": "^13.5.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.37",
