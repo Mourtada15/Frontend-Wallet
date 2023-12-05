@@ -12,7 +12,7 @@ const TableUsers = () => {
 
     const dispatch = useDispatch()
     const users = useSelector(state => state.users.users)
-    console.log(     useSelector(state => state.users.users)
+    console.log(useSelector(state => state.users.users)
     )
 
     useEffect(()=>{
@@ -20,6 +20,7 @@ const TableUsers = () => {
             try{
                 const response = await axios.get('http://localhost:8000/user/getalluser');
                 dispatch(getUser(response.data));
+                return response.data
             }catch(err){
                 console.log(err)
             }
@@ -80,6 +81,7 @@ const TableUsers = () => {
   
       </tbody>
     </Table>
+    
     </div>
   )
 }

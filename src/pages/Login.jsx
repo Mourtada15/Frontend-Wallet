@@ -3,16 +3,31 @@ import { useState } from "react";
 import Header from "../components/Header";
 import imglogin from "../assets/carousel1.png";
 import Footer from "../components/Footer";
+import { useDispatch, useSelector } from "react-redux";
+import { loginUser } from "../app/userSlice";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
+
+  const {loading , error} = useSelector((state)=>state.users);
+
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const handleLogin = (e) => {
     e.preventDefault();
-    // Add your authentication logic here
-    console.log("Login clicked with:", { username, password });
-  };
+    let userCredential={username ,password}
+    dispatch(loginUser(userCredential)).then((result)=>{
+      if(result.payload){
+        setUsername('');
+        setPassword('');
+        navigate('/')
+      }
+    })
+  }
 
   return (
     <>
@@ -30,15 +45,15 @@ const Login = () => {
           </div>
           <div className="col-md-6">
             <h2>Login </h2>
-            <form>
+            <form onSubmit={handleLogin}>
               <div className="mb-3 ">
-                <label htmlFor="InputEmail" className="form-label">
-                  Email address
+                <label htmlFor="username" className="form-label">
+                 Username
                 </label>
                 <input
-                  type="email"
+                  type="username"
                   className="form-control"
-                  id="InputEmail1"
+                  id="username"
                   aria-describedby="emailHelp"
                   onChange={(e) => setUsername(e.target.value)}
                   required
@@ -71,8 +86,11 @@ const Login = () => {
                 </label>
               </div>
               <button type="submit" className="btn btn-lg text-white bg-warning">
-                Submit
+               {loading?'Loading...':'Login'}
               </button>
+              {error&&(
+                <div className="alert alert-danger" role="alert">{error}</div>
+              )}
             </form>
           </div>
         </div>

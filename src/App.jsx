@@ -6,6 +6,7 @@ import Sidebar from "./components/Sidebar.jsx";
 import '../styles.scss'
 import  TableAdmin  from "./components/TableAdmin.jsx";
 import TableUsers from "./components/TableUsers.jsx";
+import TransactionTable from "./components/TransactionTable.jsx";
 
 function App() {
   
@@ -21,6 +22,8 @@ function App() {
             <Route path="/sidebar" element={<Sidebar />} />
             <Route path="/table" element={<TableAdmin/>} />
             <Route path="/tableuser" element={<TableUsers/>} />
+            <Route path="/transaction" element={<TransactionTable/>} />
+
 
 
 
