@@ -59,9 +59,7 @@ const Login = () => {
                   required
                  
                 />
-                <div id="emailHelp" className="form-text">
-                  Username{" "}
-                </div>
+             
               </div>
               <div className="mb-3">
                 <label htmlFor="exampleInputPassword1" className="form-label">
@@ -81,9 +79,7 @@ const Login = () => {
                   className="form-check-input"
                   id="Check"
                 />
-                <label className="form-check-label" htmlFor="exampleCheck1">
-                  Check me out
-                </label>
+               
               </div>
               <button type="submit" className="btn btn-lg text-white bg-warning">
                {loading?'Loading...':'Login'}

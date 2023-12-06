@@ -26,7 +26,7 @@ const Header = () => {
       </ul>
       <div className="d-flex" >
         <Link to={'./login'}><button className="btn btn-outline-warning" type="submit">Sign In</button></Link>
-        <button className="btn btn-outline-warning" type="submit">Register</button>
+       <Link to={'/registration'}><button className="btn btn-outline-warning" type="submit">Register</button></Link> 
       </div>
     </div>
   </div>
