@@ -10,15 +10,18 @@ const Login = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    // Add your authentication logic here
+   
     console.log("Login clicked with:", { username, password });
   };
 
   return (
     <>
+    <div className="transfer">
       <Header />
-      <div className="container d-flex align-items-center justify-content-center bg-secondary">
-        <div className="row text-warning">
+      <div className="Register">
+      <div className="transfer-container">
+      <div className="d-flex align-items-center justify-content-center">
+        <div className="row-container text-warning">
           <div className="col-md-6 d-flex flex-column align-items-center justify-content-center">
             <img
               src={imglogin}
@@ -29,7 +32,9 @@ const Login = () => {
             />
           </div>
           <div className="col-md-6">
+          <div className="login-container">
             <h2>Login </h2>
+            <br/>
             <form>
               <div className="mb-3 ">
                 <label htmlFor="InputEmail" className="form-label">
@@ -44,9 +49,7 @@ const Login = () => {
                   required
                  
                 />
-                <div id="emailHelp" className="form-text">
-                  Username{" "}
-                </div>
+      
               </div>
               <div className="mb-3">
                 <label htmlFor="exampleInputPassword1" className="form-label">
@@ -77,7 +80,11 @@ const Login = () => {
           </div>
         </div>
       </div>
+      </div>
+      </div>
       <Footer/>
+      </div>
+      </div>
     </>
   );
 };

@@ -5,6 +5,9 @@ import AdminDashboard from "./pages/AdminDashboard";
 import UserDashboard from "./pages/UserDashboard";
 import TransferPage from "./pages/TransferPage";
 import PromotionPage from"./pages/PromotionPage";
+import Chart from './components/Chart';
+import TransferMoney from "./pages/TransferMoney";
+import Login from "./pages/Login";
 import "./styles.scss";
 
 const App =()=>{
@@ -17,6 +20,10 @@ const App =()=>{
         <Route path="/user" element={<UserDashboard/>}/>
         <Route path="/transfer" element={<TransferPage/>}/>
         <Route path="/promotion" element={<PromotionPage/>}/>
+        <Route path="/chart" element={<Chart/>}/>
+<Route path="/moneyTransfer" element={<TransferMoney/>}/>
+<Route path="/login" element={<Login/>}/>
+
         </Routes>
       </BrowserRouter>
     </div>

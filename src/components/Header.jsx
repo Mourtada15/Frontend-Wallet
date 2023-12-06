@@ -16,14 +16,6 @@ const Header = () => {
       <span className="navbar-toggler-icon"></span>
     </button>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-        <li className="nav-item">
-          <a className="nav-link active text-warning fw-bold fs-3" aria-current="page" href="#">Home</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link active text-warning fw-bold fs-3" href="#">Link</a>
-        </li>
-      </ul>
       <div className="d-flex" >
         <Link to={'./login'}><button className="btn btn-outline-warning" type="submit">Sign In</button></Link>
         <button className="btn btn-outline-warning" type="submit">Register</button>

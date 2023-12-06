@@ -190,3 +190,27 @@ justify-content: flex-end;
   display: flex;
   flex-direction: column;
 }
+//transfer page
+.transfer {
+  display: flex;
+  height: 90vh; 
+  flex-direction: column;
+}
+
+.transfer-container {
+  flex: 0.9;
+  display: flex;
+  // flex-direction: column;
+  height: 100vh;
+  margin-top: 50px;
+ 
+}
+.login-container{
+margin-left:200px;
+margin-top: 50px;
+}
+.row-container{
+  display: flex;
+  flex-direction: row;
+  
+}
