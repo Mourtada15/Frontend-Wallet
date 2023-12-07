@@ -59,6 +59,7 @@ $icon-size: 1em;
   .bi-search {
     color: $dark-blue;
     margin-left: 1rem;
+    margin-top: 1rem;
   }
 
 
@@ -150,6 +151,20 @@ th, td {
 .sidebar-menu-item i {
   color:$button;
 }
+
+.fas {
+  color:$button;
+}
+.sidebar-menu-item {
+  &:hover,
+  &:focus {
+    background-color: #f8f9fa; 
+    color: #007bff; 
+  }
+
+  // Add more specific styles for other states or elements if needed
+}
+
 //buttons
 .btn.btn-primary.btn-lg {
 
@@ -158,6 +173,7 @@ th, td {
   margin-left: 50px;
   
 }
+
 
 //transfer page
 .transfer{
@@ -173,8 +189,8 @@ th, td {
 .notification{
   display: flex;
 
-margin-left: 50px;
-margin-top: 25px;
+
+margin-top: -25px;
 justify-content: flex-end;
   color: $button;
   font-size: 2em;
@@ -191,20 +207,20 @@ justify-content: flex-end;
   flex-direction: column;
 }
 //transfer page
-.transfer {
-  display: flex;
-  height: 90vh; 
-  flex-direction: column;
-}
+// .transfer {
+//   display: flex;
+//   height: 90vh; 
+//   flex-direction: column;
+// }
 
-.transfer-container {
-  flex: 0.9;
-  display: flex;
-  // flex-direction: column;
-  height: 100vh;
-  margin-top: 50px;
+// .transfer-container {
+//   flex: 0.9;
+//   display: flex;
+//   // flex-direction: column;
+//   height: 100vh;
+//   margin-top: 50px;
  
-}
+// }
 .login-container{
 margin-left:200px;
 margin-top: 50px;

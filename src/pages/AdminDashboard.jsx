@@ -3,6 +3,7 @@ import Search from "../components/Search";
 import Sidebar from "../components/Sidebar";
 import UserCard from "../components/UsersCard";
 import UserTable from "../components/UserTable";
+import Notification from "../components/Notification";
 export default function AdminDashboard() {
   return (
     <div className="admin" md='12'>
@@ -11,9 +12,10 @@ export default function AdminDashboard() {
       <div className="Admin-container">
     
         <Search />
-
+        <Notification/>
+{/* 
         <UserCard />
-        <UserTable/>
+        <UserTable/> */}
       </div>
     </div>
   );

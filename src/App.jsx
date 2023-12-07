@@ -8,6 +8,7 @@ import PromotionPage from"./pages/PromotionPage";
 import Chart from './components/Chart';
 import TransferMoney from "./pages/TransferMoney";
 import Login from "./pages/Login";
+import Home from "./pages/Home";
 import "./styles.scss";
 
 const App =()=>{
@@ -17,6 +18,7 @@ const App =()=>{
         <Routes>
           <Route path='/registration' element={<Registration />} />
         <Route path="/admin" element={<AdminDashboard/>}/>
+        <Route path="/home" element={<Home/>}/>
         <Route path="/user" element={<UserDashboard/>}/>
         <Route path="/transfer" element={<TransferPage/>}/>
         <Route path="/promotion" element={<PromotionPage/>}/>

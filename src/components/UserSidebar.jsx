@@ -20,14 +20,14 @@ export default function Sidebar() {
     <div
       style={{ display: "flex", height: "100vh", overflow: "scroll initial" }}
     >
-      <CDBSidebar textColor="#224FA8" backgroundColor="#ebedee"  >
+      <CDBSidebar textColor="#224FA8" backgroundColor="#ebedee">
         <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
           <a
             href="/"
             className="text-decoration-none"
             style={{ color: "inherit" }}
-          ><img src={Logo}  width="150" height="50" style={{ margin: 0 }}/>
-       
+          >
+           <img src={Logo}  width="150" height="50"/>
           </a>
         </CDBSidebarHeader>
 
@@ -40,7 +40,7 @@ export default function Sidebar() {
             </NavLink>
             <NavLink exact to="/transfer" activeClassName="activeClicked">
               <CDBSidebarMenuItem icon="table" className="sidebar-menu-item">
-                Transaction
+              Wallet Balance
               </CDBSidebarMenuItem>
             </NavLink>
             <li>
@@ -49,39 +49,40 @@ export default function Sidebar() {
                   onClick={toggleUserDropdown}
                   style={{ cursor: "pointer" }}
                 >
-                  <CDBSidebarMenuItem
-                    icon="user"
-                    style={{ marginRight: "1.5rem" }}
-                    className="sidebar-menu-item"
-                  >
-                    {" "}
-                    <span style={{ marginRight: "2.5rem" }}>Users</span>
-                    {showUserDropdown ? (
-                      <i className="fas fa-chevron-up"></i>
-                    ) : (
-                      <i className="fas fa-chevron-down"></i>
-                    )}
-                  </CDBSidebarMenuItem>
+                  
+                  <CDBSidebarMenuItem   icon="user" className="sidebar-menu-item">
+  <span style={{ marginRight: "2rem" }}>Money</span>
+  {showUserDropdown ? (
+    <i className="fas fa-chevron-up"></i>
+  ) : (
+    <i className="fas fa-chevron-down"></i>
+  )}
+</CDBSidebarMenuItem>
                 </span>
                 {showUserDropdown && (
                   <ul>
                     <NavLink exact to="/sub1" activeClassName="activeClicked">
-                      <CDBSidebarMenuItem>user</CDBSidebarMenuItem>
+                      <CDBSidebarMenuItem>Send</CDBSidebarMenuItem>
                     </NavLink>
                     <NavLink exact to="/sub2" activeClassName="activeClicked">
-                      <CDBSidebarMenuItem>merchant</CDBSidebarMenuItem>
+                      <CDBSidebarMenuItem>Received</CDBSidebarMenuItem>
                     </NavLink>
-                    <NavLink exact to="/sub3" activeClassName="activeClicked">
-                      <CDBSidebarMenuItem>admin</CDBSidebarMenuItem>
-                    </NavLink>
+                   
                   </ul>
                 )}
               </div>
             </li>
-          
-            <NavLink exact to="/promotion" activeClassName="activeClicked">
+            <NavLink exact to="/analytics" activeClassName="activeClicked">
               <CDBSidebarMenuItem
-                icon="exclamation-circle"
+                icon="chart-line"
+                className="sidebar-menu-item"
+              >
+                Transaction History
+              </CDBSidebarMenuItem>
+            </NavLink>
+            <NavLink exact to="/promotion" activeClassName="activeClicked" >
+              <CDBSidebarMenuItem
+             icon="exclamation-circle"
                 className="sidebar-menu-item"
               >
                 Promotions
@@ -89,20 +90,21 @@ export default function Sidebar() {
             </NavLink>
           </CDBSidebarMenu>
         </CDBSidebarContent>
-        <NavLink exact to="/home" activeClassName="activeClicked">
+
         <CDBSidebarFooter style={{ textAlign: "center" }}>
           <div
             style={{
               padding: "20px 5px",
             }}
-        >
+          >
             log out
           </div>
-          
         </CDBSidebarFooter>
-        </NavLink>
       </CDBSidebar>
-    
+      <div className="notification">
+      <i class="fa fa-bell " aria-hidden="true"></i>
+        </div>
+  
     </div>
   );
 }
