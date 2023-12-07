@@ -179,19 +179,19 @@ th, td {
 .transfer{
   display: flex;
   height: 90vh; 
+  flex-direction: row;
 }
 
 .transfer-container{
   flex: 0.9;
   display: flex;
   flex-direction: column;
+  height: 100vh; 
 }
 .notification{
   display: flex;
-
-
-margin-top: -25px;
-justify-content: flex-end;
+  margin-top: 30px;
+  justify-content: flex-end;
   color: $button;
   font-size: 2em;
 }
@@ -229,4 +229,22 @@ margin-top: 50px;
   display: flex;
   flex-direction: row;
   
+}
+//user dashboard
+.user{
+  display: flex;
+  height: 90vh; 
+}
+
+.user-container{
+  flex: 0.9;
+  display: flex;
+  flex-direction: column;
+}
+.bar-chart{
+  margin-top: 100px;
+}
+
+.fa-bell {
+  display: block;
 }

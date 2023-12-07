@@ -8,14 +8,14 @@ export default function AdminDashboard() {
   return (
     <div className="admin" md='12'>
       <Sidebar /> 
-
+   
       <div className="Admin-container">
-    
+        
         <Search />
         <Notification/>
-{/* 
+
         <UserCard />
-        <UserTable/> */}
+        <UserTable/>
       </div>
     </div>
   );

@@ -43,6 +43,7 @@ export default function Sidebar() {
                 Transaction
               </CDBSidebarMenuItem>
             </NavLink>
+        
             <li>
               <div>
                 <span
@@ -78,7 +79,7 @@ export default function Sidebar() {
                 )}
               </div>
             </li>
-          
+         
             <NavLink exact to="/promotion" activeClassName="activeClicked">
               <CDBSidebarMenuItem
                 icon="exclamation-circle"
