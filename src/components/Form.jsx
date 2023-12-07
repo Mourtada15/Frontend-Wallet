@@ -16,6 +16,8 @@ export default function Form() {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [role, setRole] = useState("");
+  const [error, setError] = useState(null); // Add state for error
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -29,9 +31,18 @@ export default function Form() {
         setPassword("");
         setEmail("");
         setRole("");
+        setError(null); // Clear any previous errors
+
       })
       .catch((error) => {
         console.error("There was an error!", error);
+        if (error.response && error.response.status === 500) {
+          // If the status code is 409 (Conflict), set the error state
+          setError("Username already exists. Please choose a different one.");
+        } else {
+          // Handle other errors as needed
+          setError("An unexpected error occurred. Please try again later.");
+        }
       });
   };
 
@@ -42,6 +53,11 @@ export default function Form() {
           <MDBCardBody className="px-4">
             <h1 className="fw-bold mb-4 pb-2 pb-md-0 mb-md-5">Registration Form</h1>
             <form onSubmit={handleSubmit}>
+            {error && (
+          <div className="alert alert-danger" role="alert">
+            {error}
+          </div>
+        )}
               <MDBRow className="mb-4">
                 <MDBCol md="6" lg="5">
                   <div className="mb-4">
@@ -54,6 +70,10 @@ export default function Form() {
                       size="lg"
                       value={username}
                       onChange={(e) => setUserName(e.target.value)}
+                      required
+                      minLength={5}
+                      maxLength={30}
+                      
                     />
                   </div>
                 </MDBCol>
@@ -70,6 +90,9 @@ export default function Form() {
                       size="lg"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
+                      required
+                      minLength={5}
+                      maxLength={50}
                     />
                   </div>
                 </MDBCol>
@@ -84,6 +107,7 @@ export default function Form() {
                       size="lg"
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
+                      required
                     />
                   </div>
                 </MDBCol>
@@ -102,6 +126,8 @@ export default function Form() {
                       className="custom-radio"
                       labelClass="custom-label"
                       onChange={(e) => setRole(e.target.value)}
+                      required
+                      
                     />
                     <MDBRadio
                       name="inlineRadio"
@@ -113,7 +139,10 @@ export default function Form() {
                       labelClass="custom-label"
                       onChange={(e) => setRole(e.target.value)}
                     />
-                
+
+
+
+      
                   </div>
                 </MDBCol>
               </MDBRow>
