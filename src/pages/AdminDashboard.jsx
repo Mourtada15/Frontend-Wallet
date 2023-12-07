@@ -13,9 +13,9 @@ export default function AdminDashboard() {
     
         <Search />
         <Notification/>
-{/* 
+
         <UserCard />
-        <UserTable/> */}
+        <UserTable/>
       </div>
     </div>
   );
