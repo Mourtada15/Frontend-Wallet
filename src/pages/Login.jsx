@@ -19,15 +19,24 @@ const Login = () => {
   const navigate = useNavigate();
   const handleLogin = (e) => {
     e.preventDefault();
-    let userCredential={username ,password}
-    dispatch(loginUser(userCredential)).then((result)=>{
-      if(result.payload){
-        setUsername('');
-        setPassword('');
-        navigate('/')
-      }
-    })
-  }
+    let userCredential = { username, password };
+  
+    
+    dispatch(loginUser(userCredential))
+      .then((result) => {
+        console.log('Login result:', result);
+  
+        if (result.payload) {
+          setUsername('');
+          setPassword('');
+          navigate('/user');
+        }
+      })
+      .catch((error) => {
+        console.error('Login error:', error);
+      });
+  };
+  
 
   return (
     <>
@@ -81,11 +90,11 @@ const Login = () => {
                 />
                
               </div>
-              <button type="submit" className="btn btn-lg text-white bg-warning">
+              <button type="submit" className="btn btn-lg text-white bg-warning" >
                {loading?'Loading...':'Login'}
               </button>
               {error&&(
-                <div className="alert alert-danger" role="alert">{error}</div>
+                <div className="alert alert-danger" role="alert">{"Login Failed try again or SignUp"}</div>
               )}
             </form>
           </div>
