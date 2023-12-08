@@ -8,7 +8,7 @@ import {
   CDBSidebarMenuItem,
 } from "cdbreact";
 import { NavLink } from "react-router-dom";
-import Logo from "../assets/logo.png"
+import Logo from "../assets/logo.png";
 export default function Sidebar() {
   const [showUserDropdown, setShowUserDropdown] = useState(false);
 
@@ -27,37 +27,37 @@ export default function Sidebar() {
             className="text-decoration-none"
             style={{ color: "inherit" }}
           >
-           <img src={Logo}  width="150" height="50"/>
+            <img src={Logo} width="150" height="50" />
           </a>
         </CDBSidebarHeader>
 
         <CDBSidebarContent className="sidebar-content">
           <CDBSidebarMenu>
-            <NavLink exact to="/admin" activeClassName="activeClicked">
+            <NavLink exact to="/user" activeClassName="activeClicked">
               <CDBSidebarMenuItem icon="columns" className="sidebar-menu-item">
                 Dashboard
               </CDBSidebarMenuItem>
             </NavLink>
-            <NavLink exact to="/transfer" activeClassName="activeClicked">
+            <NavLink exact to="/WalletBalance" activeClassName="activeClicked">
               <CDBSidebarMenuItem icon="table" className="sidebar-menu-item">
-              Wallet Balance
+                Wallet Balance
               </CDBSidebarMenuItem>
             </NavLink>
-            <li>
+          
+            {/* <li>
               <div>
                 <span
                   onClick={toggleUserDropdown}
                   style={{ cursor: "pointer" }}
                 >
-                  
-                  <CDBSidebarMenuItem   icon="user" className="sidebar-menu-item">
-  <span style={{ marginRight: "2rem" }}>Money</span>
-  {showUserDropdown ? (
-    <i className="fas fa-chevron-up"></i>
-  ) : (
-    <i className="fas fa-chevron-down"></i>
-  )}
-</CDBSidebarMenuItem>
+                  <CDBSidebarMenuItem icon="user" className="sidebar-menu-item">
+                    <span style={{ marginRight: "2rem" }}>Money</span>
+                    {showUserDropdown ? (
+                      <i className="fas fa-chevron-up"></i>
+                    ) : (
+                      <i className="fas fa-chevron-down"></i>
+                    )}
+                  </CDBSidebarMenuItem>
                 </span>
                 {showUserDropdown && (
                   <ul>
@@ -67,12 +67,16 @@ export default function Sidebar() {
                     <NavLink exact to="/sub2" activeClassName="activeClicked">
                       <CDBSidebarMenuItem>Received</CDBSidebarMenuItem>
                     </NavLink>
-                   
                   </ul>
                 )}
               </div>
-            </li>
-            <NavLink exact to="/analytics" activeClassName="activeClicked">
+            </li> */}
+      
+            <NavLink
+              exact
+              to="/UserTransaction"
+              activeClassName="activeClicked"
+            >
               <CDBSidebarMenuItem
                 icon="chart-line"
                 className="sidebar-menu-item"
@@ -80,9 +84,9 @@ export default function Sidebar() {
                 Transaction History
               </CDBSidebarMenuItem>
             </NavLink>
-            <NavLink exact to="/promotion" activeClassName="activeClicked" >
+            <NavLink exact to="/userpromotion" activeClassName="activeClicked">
               <CDBSidebarMenuItem
-             icon="exclamation-circle"
+                icon="exclamation-circle"
                 className="sidebar-menu-item"
               >
                 Promotions
@@ -101,10 +105,6 @@ export default function Sidebar() {
           </div>
         </CDBSidebarFooter>
       </CDBSidebar>
-      <div className="notification">
-      <i class="fa fa-bell " aria-hidden="true"></i>
-        </div>
-  
     </div>
   );
 }

@@ -6,7 +6,7 @@ import CarouselMain from '../components/CarouselMain';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-const Home = () => {
+export default function Home(){
   return (
     <>
     <Header/>
@@ -18,4 +18,4 @@ const Home = () => {
   );
 }
 
-export default Home;
+
