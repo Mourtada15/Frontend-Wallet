@@ -12,7 +12,6 @@ export default function AdminDashboard() {
       <div className="Admin-container">
       <Notification/>
         <Search />
-    
 
         <UserCard />
         <UserTable/>
