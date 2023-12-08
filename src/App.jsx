@@ -13,6 +13,7 @@ import BarChart from "./components/BarChart";
 import UserPromotion from "./pages/UserPromotion";
 import UserTransaction from "./pages/UserTransaction";
 import WalletBalance from "./pages/WalletBalanceUser";
+import AdminLogin from "./pages/AdminLogin";
 
 import "./styles.scss";
 
@@ -30,6 +31,7 @@ const App = () => {
           <Route path="/chart" element={<Chart />} />
           <Route path="/moneyTransfer" element={<TransferMoney />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/adminlogin" element={<AdminLogin />} />
           <Route path="/barchart" element={<BarChart />} />
           <Route path="/usertransaction" element={<UserTransaction />} />
           <Route path="/userpromotion" element={<UserPromotion />} />

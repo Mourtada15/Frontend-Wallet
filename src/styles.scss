@@ -178,8 +178,10 @@ th, td {
 //transfer page
 .transfer{
   display: flex;
-  height: 90vh; 
-  flex-direction: row;
+  height: 100vh;
+
+  flex-direction: column;
+
 }
 
 .transfer-container{
@@ -187,6 +189,7 @@ th, td {
   display: flex;
   flex-direction: column;
   height: 100vh; 
+  margin-top: 40px;
 }
 .notification{
   display: flex;

@@ -33,7 +33,7 @@ const Login = () => {
           </div>
           <div className="col-md-6">
           <div className="login-container">
-            <h2>Login </h2>
+            <h2>Login As An Admin </h2>
             <br/>
             <form>
               <div className="mb-3 ">
@@ -73,7 +73,7 @@ const Login = () => {
                   Check me out
                 </label>
               </div>
-              <Link to="/user">
+              <Link to="/admin">
               <button type="submit" className="btn btn-lg text-white bg-warning">
                 Submit
               </button>

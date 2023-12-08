@@ -10,9 +10,9 @@ export default function AdminDashboard() {
       <Sidebar /> 
    
       <div className="Admin-container">
-        
+      <Notification/>
         <Search />
-        <Notification/>
+    
 
         <UserCard />
         <UserTable/>
