@@ -3,44 +3,16 @@ import { useState } from "react";
 import Header from "../components/Header";
 import imglogin from "../assets/carousel1.png";
 import Footer from "../components/Footer";
-
-import { useDispatch, useSelector } from "react-redux";
-import { loginUser } from "../app/userSlice";
-import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
-
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-
-  const {loading , error} = useSelector((state)=>state.users);
-
-
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
   const handleLogin = (e) => {
     e.preventDefault();
-
-    let userCredential = { username, password };
-  
-    
-    dispatch(loginUser(userCredential))
-      .then((result) => {
-        console.log('Login result:', result);
-  
-        if (result.payload) {
-          setUsername('');
-          setPassword('');
-          navigate('/user');
-        }
-      })
-      .catch((error) => {
-        console.error('Login error:', error);
-      });
-
+   
+    console.log("Login clicked with:", { username, password });
   };
-  
 
   return (
     <>
@@ -61,24 +33,23 @@ const Login = () => {
           </div>
           <div className="col-md-6">
           <div className="login-container">
-            <h2>Login </h2>
-
-            <form onSubmit={handleLogin}>
-
+            <h2>Login As An Admin </h2>
+            <br/>
+            <form>
               <div className="mb-3 ">
-                <label htmlFor="username" className="form-label">
-                 Username
+                <label htmlFor="InputEmail" className="form-label">
+                  Email address
                 </label>
                 <input
-                  type="username"
+                  type="email"
                   className="form-control"
-                  id="username"
+                  id="InputEmail1"
                   aria-describedby="emailHelp"
                   onChange={(e) => setUsername(e.target.value)}
                   required
                  
                 />
-
+      
               </div>
               <div className="mb-3">
                 <label htmlFor="exampleInputPassword1" className="form-label">
@@ -98,16 +69,15 @@ const Login = () => {
                   className="form-check-input"
                   id="Check"
                 />
-               
+                <label className="form-check-label" htmlFor="exampleCheck1">
+                  Check me out
+                </label>
               </div>
-
-              <button type="submit" className="btn btn-lg text-white bg-warning" >
-               {loading?'Loading...':'Login'}
+              <Link to="/admin">
+              <button type="submit" className="btn btn-lg text-white bg-warning">
+                Submit
               </button>
-              {error&&(
-                <div className="alert alert-danger" role="alert">{"Login Failed try again or SignUp"}</div>
-              )}
-
+              </Link>
             </form>
           </div>
         </div>

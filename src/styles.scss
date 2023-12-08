@@ -59,6 +59,7 @@ $icon-size: 1em;
   .bi-search {
     color: $dark-blue;
     margin-left: 1rem;
+    margin-top: 1rem;
   }
 
 
@@ -150,32 +151,24 @@ th, td {
 .sidebar-menu-item i {
   color:$button;
 }
-//buttons
-.btn.btn-primary.btn-lg {
 
-  background-color: #3498db; 
-  color: #fff; 
-  margin-left: 50px;
-  
+.fas {
+  color:$button;
+}
+.sidebar-menu-item {
+  &:hover,
+  &:focus {
+    background-color: #f8f9fa; 
+    color: #007bff; 
+  }
+
+
 }
 
-//transfer page
-.transfer{
-  display: flex;
-  height: 90vh; 
-}
-
-.transfer-container{
-  flex: 0.9;
-  display: flex;
-  flex-direction: column;
-}
 .notification{
   display: flex;
-
-margin-left: 50px;
-margin-top: 25px;
-justify-content: flex-end;
+  margin-top: 30px;
+  justify-content: flex-end;
   color: $button;
   font-size: 2em;
 }
@@ -189,4 +182,57 @@ justify-content: flex-end;
   flex: 0.9;
   display: flex;
   flex-direction: column;
+}
+//transfer
+.transfer{
+  display: flex;
+  height: 90vh; 
+}
+
+.transfer-container{
+  flex: 0.9;
+  display: flex;
+  flex-direction: column;
+}
+//transfer page
+// .transfer {
+//   display: flex;
+//   height: 90vh; 
+//   flex-direction: column;
+// }
+
+// .transfer-container {
+//   flex: 0.9;
+//   display: flex;
+//   // flex-direction: column;
+//   height: 100vh;
+//   margin-top: 50px;
+ 
+// }
+.login-container{
+margin-left:200px;
+margin-top: 50px;
+}
+.row-container{
+  display: flex;
+  flex-direction: row;
+  
+}
+//user dashboard
+.user{
+  display: flex;
+  height: 90vh; 
+}
+
+.user-container{
+  flex: 0.9;
+  display: flex;
+  flex-direction: column;
+}
+.bar-chart{
+  margin-top: 100px;
+}
+
+.fa-bell {
+  display: block;
 }
