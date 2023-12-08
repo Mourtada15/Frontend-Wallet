@@ -162,35 +162,9 @@ th, td {
     color: #007bff; 
   }
 
-  // Add more specific styles for other states or elements if needed
-}
-
-//buttons
-.btn.btn-primary.btn-lg {
-
-  background-color: #3498db; 
-  color: #fff; 
-  margin-left: 50px;
-  
-}
-
-
-//transfer page
-.transfer{
-  display: flex;
-  height: 100vh;
-
-  flex-direction: column;
 
 }
 
-.transfer-container{
-  flex: 0.9;
-  display: flex;
-  flex-direction: column;
-  height: 100vh; 
-  margin-top: 40px;
-}
 .notification{
   display: flex;
   margin-top: 30px;
@@ -205,6 +179,17 @@ th, td {
 }
 
 .promotion-container{
+  flex: 0.9;
+  display: flex;
+  flex-direction: column;
+}
+//transfer
+.transfer{
+  display: flex;
+  height: 90vh; 
+}
+
+.transfer-container{
   flex: 0.9;
   display: flex;
   flex-direction: column;
