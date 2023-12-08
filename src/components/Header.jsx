@@ -6,6 +6,7 @@ const Header = () => {
   return (
     <div>
       <nav className="navbar navbar-expand-lg ">
+
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
             <div className="">
@@ -37,6 +38,7 @@ const Header = () => {
           </div>
         </div>
       </nav>
+
     </div>
   );
 };

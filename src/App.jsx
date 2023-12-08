@@ -4,6 +4,7 @@ import Registration from "./pages/Registration";
 import AdminDashboard from "./pages/AdminDashboard";
 import UserDashboard from "./pages/UserDashboard";
 import TransferPage from "./pages/TransferPage";
+
 import PromotionPage from "./pages/PromotionPage";
 import Chart from "./components/Chart";
 import TransferMoney from "./pages/TransferMoney";
@@ -15,13 +16,17 @@ import UserTransaction from "./pages/UserTransaction";
 import WalletBalance from "./pages/WalletBalanceUser";
 import AdminLogin from "./pages/AdminLogin";
 
+
 import "./styles.scss";
+import TableAdmin from "./components/TableAdmin";
+import TransactionTable from "./components/TransactionTable";
 
 const App = () => {
   return (
     <div className="app">
       <BrowserRouter>
         <Routes>
+
           <Route path="/registration" element={<Registration />} />
           <Route path="/admin" element={<AdminDashboard />} />
           <Route path="/" element={<Home />} />
@@ -36,6 +41,7 @@ const App = () => {
           <Route path="/usertransaction" element={<UserTransaction />} />
           <Route path="/userpromotion" element={<UserPromotion />} />
           <Route path="//WalletBalance" element={<WalletBalance/>}/>
+
         </Routes>
       </BrowserRouter>
     </div>

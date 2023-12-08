@@ -20,7 +20,10 @@ export default function Sidebar() {
     <div
       style={{ display: "flex", height: "100vh", overflow: "scroll initial" }}
     >
+
+
       <CDBSidebar textColor="#224FA8" backgroundColor="#ebedee"  >
+
         <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
           <a
             href="/"
