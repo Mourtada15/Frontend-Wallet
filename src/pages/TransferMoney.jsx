@@ -4,10 +4,10 @@ import Footer from "../components/Footer";
 import TransferForm from "../components/TransferForm";
 export default function Transfer() {
   return (
-    <div className="transfer">
+    <div className="transfermoney">
       <Header />
 <div className="Register">
-      <div className="transfer-container">
+      <div className="transfermoney-container">
         <TransferForm />
         </div>
         <Footer />

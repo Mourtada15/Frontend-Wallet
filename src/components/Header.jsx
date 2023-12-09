@@ -30,9 +30,11 @@ const Header = () => {
                   Sign In
                 </button>
               </Link>
+              <Link to={"/registration"}>
               <button className="btn btn-outline-warning" type="submit">
                 Register
               </button>
+              </Link>
             </div>
           </div>
         </div>
