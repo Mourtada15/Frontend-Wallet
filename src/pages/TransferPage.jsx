@@ -2,6 +2,11 @@ import React from "react";
 import Sidebar from "../components/Sidebar";
 import Search from "../components/Search";
 import Table from "../components/TransferTable";
+import TransactionTable from "../components/TransactionTable";
+
+
+
+
 export default function Transfer(){
     return(
       <div className="transfer">
@@ -9,7 +14,7 @@ export default function Transfer(){
   
      <div className="transfer-container">
         <Search/>
-        <Table/>
+       <TransactionTable/>
         
      </div>
         </div>
@@ -18,4 +23,4 @@ export default function Transfer(){
 
 
 
-
+// http://localhost:8000/promotion/addPromotion
