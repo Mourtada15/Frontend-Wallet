@@ -94,8 +94,6 @@ $icon-size: 1em;
   display: flex;
   margin-left: 50px;
   margin-top: 30px;
-  justify-content: space-evenly;
-
 }
 .the-card {
   width: 18rem;
@@ -194,7 +192,7 @@ th, td {
   flex: 0.9;
   display: flex;
   flex-direction: column;
-  height: 90vh;
+
 justify-content: center;
 align-items: center;
 }
@@ -249,4 +247,10 @@ h3{
   flex-direction: column;
   height: 90vh;
 
+}
+.wallet-container{
+
+  flex: 0.9;
+  display: flex;
+  flex-direction: column;
 }

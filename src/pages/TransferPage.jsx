@@ -7,7 +7,7 @@ export default function Transfer(){
       <div className="transfer">
         <Sidebar /> 
   
-     <div className="transfer-container">
+     <div className="wallet-container">
         <Search/>
         <Table/>
         

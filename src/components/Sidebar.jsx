@@ -69,15 +69,13 @@ export default function Sidebar() {
                 </span>
                 {showUserDropdown && (
                   <ul>
-                    <NavLink exact to="/sub1" activeClassName="activeClicked">
+                    <NavLink exact to="/user" activeClassName="activeClicked">
                       <CDBSidebarMenuItem>user</CDBSidebarMenuItem>
                     </NavLink>
                     <NavLink exact to="/sub2" activeClassName="activeClicked">
                       <CDBSidebarMenuItem>merchant</CDBSidebarMenuItem>
                     </NavLink>
-                    <NavLink exact to="/sub3" activeClassName="activeClicked">
-                      <CDBSidebarMenuItem>admin</CDBSidebarMenuItem>
-                    </NavLink>
+                   
                   </ul>
                 )}
               </div>
