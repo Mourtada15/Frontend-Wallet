@@ -3,14 +3,19 @@ import Notification from "../components/Notification";
 import CardTransaction from "../components/CardTransaction";
 import axios from "axios";
 import { useFetcher } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 export default function Transaction() {
+ 
+
+  const userId = localStorage.getItem('userId');
   const [userData, setUserData] = useState(null);
+
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/user/users/3`);
+        const response = await axios.get(`http://localhost:8000/user/users/${userId}`);
         console.log(response.data);
         setUserData(response.data);
       } catch (error) {
@@ -20,7 +25,6 @@ export default function Transaction() {
 
     fetchData();
   }, []);
-
 
 
 

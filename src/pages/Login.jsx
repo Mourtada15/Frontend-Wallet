@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
+  const [userId, setUserId] = useState("");
 
   const {loading , error} = useSelector((state)=>state.users);
 
@@ -32,7 +32,9 @@ const Login = () => {
         if (result.payload) {
           setUsername('');
           setPassword('');
+         
           navigate('/user');
+          localStorage.setItem('userId', result.payload.id);
         }
       })
       .catch((error) => {
