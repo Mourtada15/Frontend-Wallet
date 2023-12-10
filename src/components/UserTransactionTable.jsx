@@ -50,25 +50,7 @@ export default function UserTable() {
     );
   })}
 </tbody>
-            {/* {users.map(user =>{
-            return(
-             <tr>
-             <td>{user.id}</td>
-             <td>{user.balance_usd}</td>
-             <td>{user.balance_usdt}</td>
-             <td>{user.email}</td>
-             <td>{user.username}</td>
-             <td>{user.password}</td>
-             <td>{user.status}</td>
-             <td>{user.role}</td>
-             <td>
-                <button className='btn btn-sm btn-danger'>Delete</button>
-                <button className='btn btn-sm btn-success'>Update</button>
 
-             </td>
-
-           </tr>
-            ) */}
           
           
           
