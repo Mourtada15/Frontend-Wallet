@@ -19,11 +19,11 @@ const Login = () => {
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  
   const handleLogin = (e) => {
     e.preventDefault();
-
-    let userCredential = { username, password };
   
+    let userCredential = { username, password };
     
     dispatch(loginUser(userCredential))
       .then((result) => {
@@ -32,17 +32,21 @@ const Login = () => {
         if (result.payload) {
           setUsername('');
           setPassword('');
-         
-          navigate('/user');
+          
           localStorage.setItem('userId', result.payload.id);
+  
+          // Check the user's role and navigate to the appropriate dashboard
+          if (result.payload.role === 'admin') {
+            navigate('/admin');
+          } else if (result.payload.role === 'user') {
+            navigate('/user');
+          }
         }
       })
       .catch((error) => {
         console.error('Login error:', error);
       });
-
   };
-  
 
   return (
     <>

@@ -36,7 +36,7 @@ const App = () => {
           <Route path="/adminlogin" element={<AdminLogin />} />
           <Route path="/usertransaction" element={<UserTransaction />} />
           <Route path="/userpromotion" element={<UserPromotion />} />
-          <Route path="//WalletBalance" element={<WalletBalance/>}/>
+          <Route path="/WalletBalance" element={<WalletBalance/>}/>
 
         </Routes>
       </BrowserRouter>
