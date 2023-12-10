@@ -2,28 +2,8 @@ import { React, useState, useEffect } from "react";
 import axios from "axios";
 import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText } from "mdb-react-ui-kit"; 
 
-export default function Cards() {
-  //user info
-  // const [userNumber, setUserNumber] = useState(null)
+export default function Cards({usernumber, merchantnumber,adminnumber }) {
 
-  // //merchant info
-  // const [merchantNumber, setMerchantNumber] = useState(null)
-
-  // //admin
-  // const [adminsNumber, setAdminsNumber] = useState(null)
-
-  // useEffect(() => {
-  
-  //   axios.get('/user/users')
-  //     .then(res => {
-    
-  //       setUserNumber(res.data.userCount);
-  //     })
-  //     .catch(error => {
-  //       console.error('Error fetching user data:', error.message);
-  //     });
-
-  // }, []); 
 
   return (
 
@@ -33,7 +13,7 @@ export default function Cards() {
           <MDBCardTitle className="the-card-titles">
             <i className="fas fa-users"></i> Users
           </MDBCardTitle >
-          <MDBCardText className="the-cards-text">1,244</MDBCardText>
+          <MDBCardText className="the-cards-text">{usernumber}</MDBCardText>
         </MDBCardBody>
       </MDBCard>
       <MDBCard className="the-card">
@@ -41,7 +21,7 @@ export default function Cards() {
           <MDBCardTitle className="the-card-titles">
             <i className="fas fa-users"></i> Merchants
           </MDBCardTitle >
-          <MDBCardText className="the-cards-text">2,451</MDBCardText>
+          <MDBCardText className="the-cards-text">{merchantnumber}</MDBCardText>
         </MDBCardBody>
       </MDBCard>
       <MDBCard className="the-card">
@@ -49,7 +29,7 @@ export default function Cards() {
           <MDBCardTitle className="the-card-titles">
             <i className="fas fa-users"></i> Admins
           </MDBCardTitle >
-          <MDBCardText className="the-cards-text">51</MDBCardText>
+          <MDBCardText className="the-cards-text">{adminnumber}</MDBCardText>
         </MDBCardBody>
       </MDBCard>
 

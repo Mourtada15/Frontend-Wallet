@@ -22,18 +22,14 @@
     "bootstrap": "^5.3.2",
     "bootstrap-icons": "^1.11.2",
     "cdbreact": "^1.5.18",
-
-    "chart.js": "^4.0.0",
-
+    "chart.js": "^4.4.1",
     "client": "^0.0.1",
     "mdb-react-ui-kit": "^7.0.0",
     "mdbreact": "^5.2.0",
     "query": "^0.2.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.9.1",
-
     "react-chartjs-2": "^5.2.0",
-
     "react-dom": "^18.2.0",
     "react-i18next": "^13.5.0",
     "react-query": "^3.39.3",

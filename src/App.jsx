@@ -6,11 +6,9 @@ import UserDashboard from "./pages/UserDashboard";
 import TransferPage from "./pages/TransferPage";
 
 import PromotionPage from "./pages/PromotionPage";
-import Chart from "./components/Chart";
 import TransferMoney from "./pages/TransferMoney";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
-import BarChart from "./components/BarChart";
 import UserPromotion from "./pages/UserPromotion";
 import UserTransaction from "./pages/UserTransaction";
 import WalletBalance from "./pages/WalletBalanceUser";
@@ -33,14 +31,12 @@ const App = () => {
           <Route path="/user" element={<UserDashboard />} />
           <Route path="/transfer" element={<TransferPage />} />
           <Route path="/promotion" element={<PromotionPage />} />
-          <Route path="/chart" element={<Chart />} />
           <Route path="/moneyTransfer" element={<TransferMoney />} />
           <Route path="/login" element={<Login />} />
           <Route path="/adminlogin" element={<AdminLogin />} />
-          <Route path="/barchart" element={<BarChart />} />
           <Route path="/usertransaction" element={<UserTransaction />} />
           <Route path="/userpromotion" element={<UserPromotion />} />
-          <Route path="//WalletBalance" element={<WalletBalance/>}/>
+          <Route path="/WalletBalance" element={<WalletBalance/>}/>
 
         </Routes>
       </BrowserRouter>

@@ -34,29 +34,33 @@ export const loginUser = createAsyncThunk(
 );
 
 const userSlice = createSlice({
- name: "users", 
- initialState: {
-   currentUser: null,
-   loading: false,
-   error: false,
-   users: [],
- },
- reducers: {
-   getUser: (state, action) => {
-     state.users = action.payload.map((user) => {
-       return {
-         id: user.id,
-         balance_usd: user.balance_usd,
-         balance_usdt: user.balance_usdt,
-         email: user.email,
-         username: user.username,
-         password: user.password,
-         status: user.status,
-         role: user.role,
-       };
-     });
-   },
- },
+  name: "users", 
+  initialState: {
+    currentUser: null,
+    loading: false,
+    error: false,
+    users: [],
+  },
+  reducers: {
+    getUser: (state, action) => {
+      state.users = action.payload.map((user) => {
+        return {
+          id: user.id,
+          balance_usd: user.balance_usd,
+          balance_usdt: user.balance_usdt,
+          email: user.email,
+          username: user.username,
+          password: user.password,
+          status: user.status,
+          role: user.role,
+        };
+      });
+    },
+    setUserId: (state, action) => {
+      state.currentUser = action.payload;
+    },
+  },
+ 
  extraReducers: (builder) => {
    builder
    .addCase(loginUser.pending, (state) => {
