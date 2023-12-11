@@ -40,6 +40,8 @@ const Login = () => {
             navigate('/admin');
           } else if (result.payload.role === 'user') {
             navigate('/user');
+          }   else if (result.payload.role === 'merchant') {
+            navigate('/merchant');
           }
         }
       })

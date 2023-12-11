@@ -18,6 +18,7 @@ import AdminLogin from "./pages/AdminLogin";
 import "./styles.scss";
 import TableAdmin from "./components/TableAdmin";
 import TransactionTable from "./components/TransactionTable";
+import MerchantDashboard from "./pages/MerchantDashboard";
 
 const App = () => {
   return (
@@ -37,6 +38,8 @@ const App = () => {
           <Route path="/usertransaction" element={<UserTransaction />} />
           <Route path="/userpromotion" element={<UserPromotion />} />
           <Route path="/WalletBalance" element={<WalletBalance/>}/>
+          <Route path="/merchant" element={<MerchantDashboard/>}/>
+
 
         </Routes>
       </BrowserRouter>
