@@ -4,6 +4,7 @@ import CardTransaction from "../components/CardTransaction";
 import axios from "axios";
 import { useFetcher } from "react-router-dom";
 import { useSelector } from "react-redux";
+import UserBar from '../components/UserSidebar';
 
 export default function Transaction() {
  
@@ -30,6 +31,7 @@ export default function Transaction() {
 
   return (
     <div className="transfer">
+      <UserBar />
       <div className="transfer-container">
         <Notification />
         

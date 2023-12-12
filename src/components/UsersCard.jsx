@@ -7,7 +7,9 @@ export default function Cards({usernumber, merchantnumber,adminnumber }) {
 
   return (
 
-    <div className="the-card-container">
+    <div className="the-card-container d-flex justify-content-center align-items-center">
+          <div className="col ">
+      <div className="row  ">
       <MDBCard className="the-card">
         <MDBCardBody className="the-cards-body">
           <MDBCardTitle className="the-card-titles">
@@ -34,6 +36,7 @@ export default function Cards({usernumber, merchantnumber,adminnumber }) {
       </MDBCard>
 
     </div>
-  
+    </div>
+    </div>
   );
 }

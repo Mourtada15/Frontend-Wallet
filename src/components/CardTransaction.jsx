@@ -6,6 +6,9 @@ export default function Cards({Username, balanceusd , balanceusdT}) {
   return (
 
     <div className="the-card-container">
+       <div className="col">
+      <div className="row">
+       
       <MDBCard className="the-card">
         <MDBCardBody className="the-cards-body">
           <MDBCardTitle className="the-card-titles">
@@ -30,7 +33,8 @@ export default function Cards({Username, balanceusd , balanceusdT}) {
           <MDBCardText className="the-cards-text">{balanceusdT}</MDBCardText>
         </MDBCardBody>
       </MDBCard>
-
+      </div>
+      </div>
     </div>
   
   );

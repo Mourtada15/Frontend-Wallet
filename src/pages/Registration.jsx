@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../components/Header.jsx";
 import Form from "../components/Form.jsx";
+import sideImage from "../assets/register.png";
 export default function Registration() {
   return (
     <>
@@ -12,8 +13,9 @@ export default function Registration() {
 <h3 style={{marginLeft: '90px', color: '#809BAA'}} className='mb-5 text-start'>
   Create your account today and unlock a world of personalized experiences!<br/> Please fill in the following information to get started.</h3>
 </div>
-      <Form />
-      </div>
+
+              <Form />
+   </div>
     </>
   );
 }

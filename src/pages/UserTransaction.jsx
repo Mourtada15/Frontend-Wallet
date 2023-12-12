@@ -7,9 +7,9 @@ export default function Transaction(){
     return(
       <div className="transfer">
         <UserBar /> 
-  
-     <div className="transfer-container">
-        <Notification/>
+     
+     <div className="wallet-container">
+     <Notification/>
         <CardTransaction/>
      <UserTransactionTable/>
      </div>
